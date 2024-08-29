@@ -1,0 +1,105 @@
+/* Reset de estilos y estilo base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Fuente del texto principal */
+    background-color: #f0f0f0; /* Color de fondo del cuerpo */
+}
+
+header {
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color de texto del encabezado */
+    padding: 10px 20px; /* Relleno interior del encabezado */
+    display: flex; /* Contenedor flexible */
+    align-items: center; /* Centrado vertical de los elementos */
+    justify-content: space-between; /* Espacio entre elementos */
+}
+
+/* Estilos para imágenes de usuario y fotos */
+.usua {
+    width: 50px; /* Ancho de la imagen de usuario */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+.fot {
+    width: 50px; /* Ancho de la foto */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 150px;
+}
+
+
+.school-name {
+    font-size: 1.5rem; /* Tamaño de fuente */
+    font-weight: bold; /* Peso de la fuente */
+}
+
+.but {
+    background: #555; /* Color de fondo del botón */
+    text-decoration: dashed; /* Decoración de texto punteada */
+    padding: 15px 100px; /* Relleno interior del botón */
+    color: white; /* Color de texto */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de puntero */
+    font-size: 16px; /* Tamaño de fuente */
+    border-radius: 5px; /* Radio de borde */
+    transition: background 0.6s ease; /* Transición de fondo */
+}
+
+.but:hover {
+    background: #333; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilo para el contenedor de búsqueda */
+.search-container {
+    display: flex; /* Contenedor flexible */
+    align-items: center; /* Centrado vertical de los elementos */
+}
+
+.search-box {
+    padding: 8px; /* Relleno interior de la caja de búsqueda */
+    border: 1px solid #ccc; /* Borde de la caja de búsqueda */
+    border-radius: 4px; /* Radio de borde */
+    margin-left: 10px; /* Margen izquierdo */
+    width: 200px; /* Ancho de la caja de búsqueda */
+}
+
+.search-button {
+    padding: 8px; /* Relleno interior del botón de búsqueda */
+    background-color: #555; /* Color de fondo del botón de búsqueda */
+    color: white; /* Color de texto del botón de búsqueda */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Radio de borde */
+    cursor: pointer; /* Cursor de puntero */
+}
+
+.search-button:hover {
+    background-color: #444; /* Color de fondo al pasar el mouse sobre el botón de búsqueda */
+}
+
+h1 {
+    text-align: center; /* Alineación centrada del texto h1 */
+}
+
+/* Estilos para el modal de edición */
+#editModal {
+    position: fixed; /* Posición fija */
+    top: 50%; /* Distancia desde arriba */
+    left: 50%; /* Distancia desde la izquierda */
+    transform: translate(-50%, -50%); /* Centrado en pantalla */
+    background-color: rgb(121, 31, 31); /* Color de fondo del modal */
+    padding: 20px; /* Relleno interior */
+    border: 2px solid black; /* Borde del modal */
+}
+
+#editModal form {
+    display: flex; /* Formulario como contenedor flexible */
+    flex-direction: column; /* Dirección de columna para los elementos del formulario */
+}
+
+#editModal label {
+    margin-top: 10px; /* Margen superior para las etiquetas del formulario */
+}
