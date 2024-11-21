@@ -1,0 +1,127 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Danfo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Danfo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family:'Poppins', 'Danfo','Sans' !important; 
+}
+
+:root{
+
+    --bg: #fff;
+    --checked: #047c8f;
+}
+body {
+   background-color: #0f103d;
+}
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar-brand {
+    color: #ffffff;
+}
+
+.form-control {
+    border-color: #ced4da;
+}
+/*estilos del modal de vista previa*/
+.article-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 15px;
+}
+
+.card-body {
+    padding: 20px; 
+}
+
+.background img {
+    width: 100%; 
+    height: auto; 
+}
+
+.blog-previewbottom {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 0; 
+}
+
+.blog-author {
+    display: flex; 
+    align-items: center; 
+}
+
+.blog-author-image {
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
+    margin-right: 10px; 
+}
+
+
+.form-group {
+    margin-bottom: 1rem; 
+}
+.badge {
+    background-color: #007bff; 
+    color: black; 
+}
+/*estilos del modal de vista previa*/
+.form-control:focus {
+    border-color: #fd7e14;
+    box-shadow: none;
+}
+
+.btn-primary {
+    background-color: #fd7e14;
+    border-color: #fd7e14;
+}
+
+.btn-primary:hover {
+    background-color: #ff9d52;
+    border-color: #ff9d52;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.card-body {
+    background-color: #ffffff;
+}
+
+input[type=checkbox]{
+    height: 0;
+    width: 0; 
+    visibility: hidden;
+}
+input:checked + label{
+    background: var(--checked)
+}
+
+.dropdown{
+    background-color: tomato !important;
+}
+
+/* -------------------- INDEX ------------------------------ **/
+
