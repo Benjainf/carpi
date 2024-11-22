@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="css\style.css">
         <title>Login</title>
+        <link rel="icon" type="image/png" href="img/legoo.png">
       </head>
 
     <body>
