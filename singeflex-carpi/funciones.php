@@ -36,7 +36,7 @@ $conn = Conexion();
 // Función para la barra de navegación
 function nav($user, $per) {
     ?>
-    <nav style="height: 72px; background: url('img/nav.jpg') no-repeat center center; background-size: cover; display: flex; align-items: center; padding: 0 74px;">
+    <nav style="height: 70px; background: url('img/nav.jpg') center; background-size: cover; display: flex; align-items: center; padding: 0 74px;">
     <a>
         <img src="img/legoo.png" style="width: 60px;">
     </a>
@@ -44,7 +44,7 @@ function nav($user, $per) {
     
     <!-- Formulario de búsqueda que redirige a Google -->
     <form action="https://www.google.com/search" method="GET" class="d-flex ms-auto" role="search" style="display: flex; align-items: center; margin-left: auto;">
-        <input class="form-control me-2" type="search" name="q" placeholder="Buscar..." aria-label="Buscar" style="width: 250px;">
+        <input class="form-control me-2" type="search" name="q" placeholder="Buscar..." aria-label="Buscar" style="width: 40%;">
         <button class="btn btn-light" type="submit">Buscar</button>
     </form>
 </nav>
@@ -53,7 +53,7 @@ function nav($user, $per) {
     <div class="wrapper">
         <aside style=" background: #d30909; " id="sidebar">
             <div class="d-flex" style="border-bottom:10px;">
-            <button class="toggle-btn" type="button" style=" padding: 1rem 0.5rem;">
+            <button class="toggle-btn" type="button" style=" padding: 1rem 0.5rem; display: flex;" >
                 <img src="img/menu.png" alt="Logo" style="width:40px">
                 </button>
                 <div class="sidebar-logo">
@@ -64,7 +64,7 @@ function nav($user, $per) {
                 <?php
                 if(isset($_SESSION['user'])) { // Si hay una sesión iniciada, muestra el nombre de usuario
                    
-                    if ($per==1){echo "<a href='ver_detalle.php'> ";}
+                    if ($per==1){echo "<a href=#> ";}
                     else {echo "<a> ";}
                     echo "<button class='btn btn-outline-primary' type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasNavbar' aria-controls='offcanvasNavbar'>";    
                     echo "<img src='img/user.png' style='width: 50px;'> ";
@@ -133,64 +133,6 @@ function nav($user, $per) {
                             ";
                         } 
                         ?>   
-
-            </div>
-        </aside>
-                
-            </div>
-        </div>
-    </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-    <script>
-      const hamBurger = document.querySelector(".toggle-btn");
-
-      hamBurger.addEventListener("click", function () {
-      document.querySelector("#sidebar").classList.toggle("expand");
-      });
-    </script>
-    <?php
-}
-
-
-function navi() {
-    ?>
-    <nav style="height: 72px; background: url('img/nav.jpg') no-repeat center center; background-size: cover; display: flex; align-items: center; padding: 0 74px;">
-    <a>
-        <img src="img/legoo.png" style="width: 60px;">
-    </a>
-    <h1 class="fs-1 text-light" style="padding: 1rem 0.5rem;">Sigeflex</h1>
-    
-    <!-- Formulario de búsqueda que redirige a Google -->
-    <form action="https://www.google.com/search" method="GET" class="d-flex ms-auto" role="search" style="display: flex; align-items: center; margin-left: auto;">
-        <input class="form-control me-2" type="search" name="q" placeholder="Buscar..." aria-label="Buscar" style="width: 250px;">
-        <button class="btn btn-light" type="submit">Buscar</button>
-    </form>
-</nav>
-
-
-    <div class="wrapper">
-        <aside style=" background: #d30909; " id="sidebar">
-            <div class="d-flex" style="border-bottom:10px;">
-            <button class="toggle-btn" type="button" style=" padding: 1rem 0.5rem;">
-                <img src="img/menu.png" alt="Logo" style="width:40px">
-                </button>
-                <div class="sidebar-logo">
-                    <a style="color:white;">MENU</a>
-                </div>
-            </div>
-            <ul class="sidebar-nav">
-                <li class="sidebar-item">
-                    <a href="index.php" class="sidebar-link">
-                    <i class="bi bi-house"></i>
-                        <span>Inicio</span>
-                    </a>
-                </li>
-
-            </ul>
-            <div class="sidebar-footer">   
 
             </div>
         </aside>
@@ -388,19 +330,25 @@ function paginacionuser($permiso){
     // Recorre las filas de la tabla usuario, para mostrar los datos que obtiene
     ?>
     <tr>
+        <!-- Muestra el DNI del usuario -->
         <td><?php echo htmlspecialchars($DNI); ?></td>
+        <!-- Muestra el apellido del usuario -->
         <td><?php echo htmlspecialchars($apellido); ?></td>
+        <!-- Muestra el nombre del usuario -->
         <td><?php echo htmlspecialchars($nombre); ?></td>
+        <!-- Muestra la edad del usuario -->
         <td><?php echo htmlspecialchars($edad); ?></td>
+        <!-- Muestra el nombre de usuario -->
         <td><?php echo htmlspecialchars($Usuario); ?></td>
+        <!-- Muestra el permiso asociado al usuario -->
         <td><?php echo htmlspecialchars($Permiso); ?></td>
+        <!-- Muestra las acciones disponibles según el permiso del usuario que ingresó -->
         <td>
         <?php 
         // Dependiendo del permiso del usuario que ingresó a la página, podrá tener diferentes acciones
         if ($permiso_usuario == 1) {  // Superusuario
             // Mostrar enlace para ver detalles
             echo '<a href="ver_detalle.php?valor=' . urlencode($DNI) . '"> <i class="bi bi-person-square"></i></a>';
-            
             // Mostrar enlaces de actualización y eliminación
             echo '<a href="update_user.php?valor=' . urlencode($DNI) . '"> <i class="bi bi-pencil"></i> </a>';
             echo '<a href="delate_user.php?valor=' . urlencode($DNI) . '"> <i class="bi bi-trash"></i> </a>';
@@ -409,6 +357,7 @@ function paginacionuser($permiso){
             echo '<a href="ver_detalle.php?valor=' . urlencode($DNI) . '"> <i class="bi bi-person-square"></i></a>';
             echo '<a href="update_user.php?valor=' . urlencode($DNI) . '"> <i class="bi bi-pencil"></i> </a>';
         } elseif ($permiso_usuario == 3) { // Visitante, solo ver detalles
+            // Mostrar solo el enlace para ver detalles del usuario
             echo '<a href="ver_detalle.php?valor=' . urlencode($DNI) . '"> <i class="bi bi-person-square"></i></a>';
         }
         ?>
@@ -417,15 +366,15 @@ function paginacionuser($permiso){
     <?php
 }
 ?>
-
 <script>
+// Configuración de DataTable para la tabla con ID "miTabla"
 $(document).ready(function() {
     $('#miTabla').DataTable({
-        "paging": true,
-        "pageLength": 5,
-        "lengthMenu": [5, 10, 20, 50],
-        "ordering": true,
-        "searching": true
+        "paging": true,           // Habilita la paginación
+        "pageLength": 5,          // Número de filas por página por defecto
+        "lengthMenu": [5, 10, 20, 50], // Opciones de cantidad de filas por página
+        "ordering": true,         // Habilita el ordenamiento por columnas
+        "searching": true         // Habilita el cuadro de búsqueda
     });
 });
 </script>

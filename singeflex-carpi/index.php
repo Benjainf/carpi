@@ -32,6 +32,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-POdVZ3tC6lW4naDpT5RmzqxO0i5pzhRO5X77o3l12tnnJKIh4TYJL59b/hwXlTCW" crossorigin="anonymous"></script>
     <!-- Cargar un archivo JavaScript propio para añadir interactividad a la página -->
     <script src="script.js"></script>
+
+    <style>
+    #sidebar:not(.expand) .user-login { display: none;}
+    #sidebar:not(.expand) .sidebar-nav {display: none;}
+    #sidebar:not(.expand) .sidebar-footer {display: none;}
+    #sidebar:not(.expand) {height: 0;}
+    </style>
 </head>
 <?php
         // Incluir un archivo PHP que contiene funciones que se usarán en este documento
