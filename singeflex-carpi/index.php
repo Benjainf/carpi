@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <!-- Título de la página, aparece en la pestaña del navegador -->
     <title> Sigeflex </title>
+    <link rel="icon" type="image/png" href="img/legoo.png">
     <!-- Cargar la librería de íconos de Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Cargar el CSS de la versión 4 de Bootstrap (para estilos básicos y de diseño) -->
